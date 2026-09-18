@@ -1,5 +1,5 @@
 #include "operaciones.h"
-
+//esta funcion suma dos numeros y retorna su valor 
 int sumar(int a, int b) {
     return a + b;
 }
