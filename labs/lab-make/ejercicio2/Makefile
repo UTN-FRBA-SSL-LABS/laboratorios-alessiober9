@@ -12,8 +12,8 @@ all: $(PROGRAMA)
 $(PROGRAMA): scanner2.l
 	# TODO 1: Ejecutá Flex sobre scanner2.l para generar lex.yy.c
 	#         Comando: flex <archivo.l>
-		flex scanner2.l
-		$(CC) lex.yy.c -o $(PROGRAMA) -lfl
+	flex scanner2.l
+	$(CC) lex.yy.c -o $(PROGRAMA) -lfl
 
 	# TODO 2: Compilá lex.yy.c con gcc para generar el ejecutable
 	#         Usá las variables $(CC), el archivo lex.yy.c,
@@ -24,5 +24,5 @@ clean:
 	# TODO 3: Eliminá el ejecutable y el archivo generado por Flex
 	#         Archivos a eliminar: $(PROGRAMA) y lex.yy.c
 	#         Usá rm -f
-		rm -f $(PROGRAMA) lex.yy.c
+	rm -f $(PROGRAMA) lex.yy.c
 .PHONY: all clean
