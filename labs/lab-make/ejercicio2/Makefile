@@ -12,6 +12,10 @@ all: $(PROGRAMA)
 $(PROGRAMA): scanner2.l
 	# TODO 1: Ejecutá Flex sobre scanner2.l para generar lex.yy.c
 	#         Comando: flex <archivo.l>
+	@echo "=== DIAGNOSTICO: buscando flex ==="
+	@which flex || echo "flex NO encontrado en PATH"
+	@flex --version || echo "flex --version fallo"
+	@echo "=== FIN DIAGNOSTICO ==="
 	flex scanner2.l
 	$(CC) lex.yy.c -o $(PROGRAMA) -lfl
 
